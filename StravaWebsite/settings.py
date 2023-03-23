@@ -138,3 +138,19 @@ STATIC_URL = 'static/'
 # https://docs.djangoproject.com/en/4.0/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+<<<<<<< HEAD:StravaWebsite/settings.py
+=======
+
+STATIC_ROOT = BASE_DIR / 'static_collected'
+
+
+AUTHENTICATION_BACKENDS = (
+    #'social_core.backends.strava.StravaOAuth',
+    'django.contrib.auth.backends.ModelBackend',
+)
+
+# Strava settings
+CLIENT_ID = '104424'
+CLIENT_SECRET = '3b7a383f4a012db45076bc4d4b68526b71ca56a9'
+STRAVA_REDIRECT = "http://localhost:8000/login"
+>>>>>>> 0e1d53f4154137a8298ba86eb5485dc33ffb372b:web_project/settings.py
