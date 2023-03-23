@@ -27,7 +27,7 @@ class StravaAuth(generic.View):
         
         # Log the user in
         user = strava_authenticate(code=code)
-        login(request, user)
+        login(request, user, 'django.contrib.auth.backends.ModelBackend')
                     
         return http.HttpResponseRedirect(self.url)
         
