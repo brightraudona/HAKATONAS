@@ -11,6 +11,9 @@ def about(request):
 def contact(request):
     return render(request, "hakatonapp/contact.html")
 
+def contact(request):
+    return render(request, "hakatonapp/login.html")
+
 def hello_there(request, name):
     return render(
         request,

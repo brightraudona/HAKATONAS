@@ -11,13 +11,14 @@ class StravaV3Backend(object):
     def authenticate(self, code):
         client_id = settings.CLIENT_ID
         client_secret = settings.CLIENT_SECRET
+        redirect_uri = settings.STRAVA_REDIRECT
         
         # Make the request to the API
-        c = StravaClient()
+        client = StravaClient()
         try:
-            response = c.get_token(client_id, client_secret, code)
+            response = client.get_token(client_id, client_secret, redirect_uri, code)
         except: # TODO: specific exception
-            return None
+            return "error"
                 
         access_token = response["access_token"]
         user_id = response["athlete"]["id"]

@@ -130,15 +130,11 @@ STATIC_ROOT = BASE_DIR / 'static_collected'
 
 
 AUTHENTICATION_BACKENDS = (
-    'social_core.backends.strava.StravaOAuth',
+    #'social_core.backends.strava.StravaOAuth',
     'django.contrib.auth.backends.ModelBackend',
 )
-SOCIAL_AUTH_LOGIN_REDIRECT_URL = '/connected/'
-SOCIAL_AUTH_STRAVA_SCOPE = ['activity:read_all']
-SOCIAL_AUTH_STRAVA_KEY = '104424' #Client ID from API Application
-SOCIAL_AUTH_STRAVA_SECRET = '3b7a383f4a012db45076bc4d4b68526b71ca56a9' # Client Secret from API Application
 
 # Strava settings
 CLIENT_ID = '104424'
 CLIENT_SECRET = '3b7a383f4a012db45076bc4d4b68526b71ca56a9'
-STRAVA_REDIRECT = "http://localhost:8000/login/"
+STRAVA_REDIRECT = "http://localhost:8000/login"
