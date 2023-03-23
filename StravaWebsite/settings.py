@@ -153,4 +153,28 @@ AUTHENTICATION_BACKENDS = (
 CLIENT_ID = '104424'
 CLIENT_SECRET = '3b7a383f4a012db45076bc4d4b68526b71ca56a9'
 STRAVA_REDIRECT = "http://localhost:8000/login"
->>>>>>> 0e1d53f4154137a8298ba86eb5485dc33ffb372b:web_project/settings.py
+SOCIAL_AUTH_STRAVA_KEY = '104424'
+SOCIAL_AUTH_STRAVA_SECRET = '3b7a383f4a012db45076bc4d4b68526b71ca56a9' # os.getenv('CLIENT_SECRET')
+
+# Internationalization
+# https://docs.djangoproject.com/en/4.0/topics/i18n/
+
+LANGUAGE_CODE = 'en-us'
+
+TIME_ZONE = 'UTC'
+
+USE_I18N = True
+
+USE_TZ = True
+
+
+# Static files (CSS, JavaScript, Images)
+# https://docs.djangoproject.com/en/4.0/howto/static-files/
+
+STATIC_URL = 'static/'
+
+# Default primary key field type
+# https://docs.djangoproject.com/en/4.0/ref/settings/#default-auto-field
+
+DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
