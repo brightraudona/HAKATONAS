@@ -37,8 +37,8 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'stravauth',
     'hakatonapp',
+    'social_django',
 ]
 
 MIDDLEWARE = [
@@ -130,9 +130,8 @@ STATIC_ROOT = BASE_DIR / 'static_collected'
 
 
 AUTHENTICATION_BACKENDS = (
-    # 'social_core.backends.strava.StravaOAuth',
-    # 'django.contrib.auth.backends.ModelBackend',
-    'stravauth.backend.StravaV3Backend',
+    'social_core.backends.strava.StravaOAuth',
+    'django.contrib.auth.backends.ModelBackend',
 )
 SOCIAL_AUTH_LOGIN_REDIRECT_URL = '/connected/'
 SOCIAL_AUTH_STRAVA_SCOPE = ['activity:read_all']

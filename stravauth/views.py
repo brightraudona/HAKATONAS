@@ -1,7 +1,5 @@
-from django.conf import settings
-from django.contrib.auth import login, authenticate as strava_authenticate
 from django import http
-from django.shortcuts import redirect
+from django.contrib.auth import login, authenticate as strava_authenticate
 from django.views import generic
 
 
@@ -9,9 +7,10 @@ class StravaRedirect(generic.RedirectView):
     """
         Redirects to the Strava oauth page
     """
-    def get_redirect_url(self, approval_prompt="auto", scope="write", *args, **kwargs):
+
+    def get_redirect_url(self, approval_prompt="auto", scope="read", *args, **kwargs):
         from stravauth.utils import get_stravauth_url
-        
+
         return get_stravauth_url(approval_prompt, scope)
 
 

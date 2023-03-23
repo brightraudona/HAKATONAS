@@ -1,14 +1,14 @@
 
 
-def get_stravauth_url(approval_prompt="auto", scope="write"):
+def get_stravauth_url(approval_prompt="auto", scope="read"):
     """
         Function that returns the strava oauth url for your 
         project
     """
     from django.conf import settings
-        
+
     # TODO: check scope and approval_prompt are reasonable 
-    
+
     strava_url = "https://app.strava.com/oauth/authorize"
     vars = ""
     vars += "client_id=%s" % settings.CLIENT_ID
